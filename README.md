@@ -16,9 +16,9 @@ arithmetic logic in a user-friendly interface.
 
 ## 📸 Screenshots
 
-| Friends List                                  | Add Friend Form                             | Split Bill Form                              |
-| --------------------------------------------- | ------------------------------------------- | -------------------------------------------- |
-| ![Friends List](./screenshot/Screenshot1.png) | ![Add Friend](./screenshot/Screenshot2.png) | ![Split Bill](./screenshot/Screenshot3.png)s |
+| Friends List                                  | Add Friend Form                             | Split Bill Form                             |
+| --------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| ![Friends List](./screenshot/Screenshot1.png) | ![Add Friend](./screenshot/Screenshot2.png) | ![Split Bill](./screenshot/Screenshot3.png) |
 
 ## 🛠️ Installation
 
@@ -54,4 +54,4 @@ README.md
 
 🌐 Live Demo
 
-🚀 Live on Netlify: https://your-app-name.netlify.app
+🚀 Live on Netlify: https://bills-with-buddies.netlify.app/
