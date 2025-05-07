@@ -16,13 +16,9 @@ arithmetic logic in a user-friendly interface.
 
 ## 📸 Screenshots
 
-> You can include screenshots to give a visual impression of your app. Place
-> them in a `/screenshots` folder and update the paths below after uploading to
-> GitHub.
-
-| Friends List                                   | Add Friend Form                              | Split Bill Form                               |
-| ---------------------------------------------- | -------------------------------------------- | --------------------------------------------- |
-| ![Friends List](./screenshots/Screenshot1.png) | ![Add Friend](./screenshots/Screenshot2.png) | ![Split Bill](./screenshots/Screenshot3.png)s |
+| Friends List                                  | Add Friend Form                             | Split Bill Form                              |
+| --------------------------------------------- | ------------------------------------------- | -------------------------------------------- |
+| ![Friends List](./screenshot/Screenshot1.png) | ![Add Friend](./screenshot/Screenshot2.png) | ![Split Bill](./screenshot/Screenshot3.png)s |
 
 ## 🛠️ Installation
 
@@ -30,7 +26,7 @@ To get this project up and running locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/split-bill-app.git
+git clone https://github.com/Miss-Marvis/eat-and-split
 
 
 # Install dependencies
@@ -48,11 +44,13 @@ npm run dev
 
      Plain CSS
 
-📂 Project Structure split-bill-app/ │ ├── public/ │ └── vite.svg ├── src/ │ ├──
-assets/ │ │ └── Avatar3.jpg │ ├── App.css │ ├── App.jsx │ ├── index.css │ ├──
-main.jsx │ └── ... ├── screenshots/ │ ├── Screenshot1.png │ ├── Screenshot2.png
-│ └── Screenshot3.png │ ├── .gitignore ├── index.html ├── package.json ├──
-README.md ├── vite.config.js └── ...
+📂 Project Structure EAT-And-Split/ ├── dist/ ├── node_modules/ ├── public/ │
+└── vite.svg ├── screenshot/ │ ├── Screenshot1.png │ ├── Screenshot2.png │ └──
+Screenshot3.png ├── src/ │ ├── assets/ │ │ └── images/ │ │ ├── react.svg │ │ ├──
+Screenshot1.png │ │ ├── Screenshot2.png │ │ └── Screenshot3.png │ ├── App.css │
+├── App.jsx │ ├── index.css │ └── main.jsx ├── .gitignore ├── eslint.config.js
+├── index.html ├── package-lock.json ├── package.json ├── vite.config.js └──
+README.md
 
 🌐 Live Demo
 
