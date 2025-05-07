@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  max-width: 100%;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Friends List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  transition: background 0.3s ease-in-out;
+ 
+}
+
+li:hover {
+  background-color: #f1f3f5;
+}
+
+li img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.friend-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.friend-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.red {
+  color: #e03131;
+  font-weight: bold;
+}
+
+.green {
+  color: #2f9e44;
+  font-weight: bold;
+}
+
+/* Buttons */
+.button {
+  background-color: #ff922b;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #e67700;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Add Friend Form */
+.form-add-friend {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
+.form-add-friend label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-add-friend input {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: black;
+  transition: border 0.2s ease-in-out;
+}
+
+.form-add-friend input:focus {
+  border-color: #ff922b;
+  outline: none;
+}
+
+
+/* Split Bill Form */
+.form-split-bill {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff9e6; 
+  border-radius: 12px;
+  padding: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 400px;
+}
+
+.form-split-bill h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0 0 16px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form-split-bill .form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.form-split-bill label {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-split-bill input,
+.form-split-bill select {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 60%;
+  background-color: #fff;
+  color: black;
+}
+
+.form-split-bill input:focus,
+.form-split-bill select:focus {
+  border-color: #ff922b;
+  outline: none;
+}
+
+.form-split-bill .button-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.form-split-bill .button {
+  background-color: #ff922b;
+  padding: 8px 16px;
+}
