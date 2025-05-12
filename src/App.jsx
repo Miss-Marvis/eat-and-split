@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+
 import './App.css'
 import avatar1 from '/src/assets/images/Avater1.jpg'
 import avatar2 from '/src/assets/images/Avater2.jpg'
 import avatar3 from '/src/assets/images/Avater3.jpg'
 
-const initialFriends = [
+const defaultFriends = [
 	{
 		id: 118836,
 		name: 'Clark',
@@ -17,7 +19,6 @@ const initialFriends = [
 		image: avatar2,
 		balance: 20,
 	},
-
 	{
 		id: 499476,
 		name: 'Anthony',
@@ -26,10 +27,27 @@ const initialFriends = [
 	},
 ]
 
+function getStoredFriends() {
+	const stored = localStorage.getItem('friends')
+	return stored ? JSON.parse(stored) : defaultFriends
+}
+
 export default function App() {
-	const [friends, setFriends] = useState(initialFriends)
 	const [showAddFriend, setShowAddFriend] = useState(false)
 	const [selectedFriend, setSelectedFriend] = useState(null)
+	const [notification, setNotification] = useState('')
+
+	const { username } = useParams()
+	const storageKey = `friends_${username}`
+
+	const [friends, setFriends] = useState(() => {
+		const stored = localStorage.getItem(storageKey)
+		return stored ? JSON.parse(stored) : []
+	})
+
+	useEffect(() => {
+		localStorage.setItem(storageKey, JSON.stringify(friends))
+	}, [friends])
 
 	function handleShowAddFriend() {
 		setShowAddFriend((show) => !show)
@@ -59,6 +77,16 @@ export default function App() {
 		setSelectedFriend(null)
 	}
 
+	function copyLink() {
+		navigator.clipboard.writeText(window.location.href)
+
+		setNotification('Link copied to clipboard!')
+
+		setTimeout(() => {
+			setNotification('')
+		}, 3000)
+	}
+
 	return (
 		<div className='app'>
 			<div className='sidebar'>
@@ -73,6 +101,16 @@ export default function App() {
 				<button className='button' onClick={handleShowAddFriend}>
 					{showAddFriend ? 'Close' : 'Add Friend'}
 				</button>
+
+				<button className='button1' onClick={() => setFriends(defaultFriends)}>
+					Reset Friends
+				</button>
+
+				<div className='copy-link' onClick={copyLink}>
+					Share your dashboard 🔗
+				</div>
+
+				{notification && <div className='notification'>{notification}</div>}
 			</div>
 
 			{selectedFriend && (
